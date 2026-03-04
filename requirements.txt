@@ -1,66 +1,14 @@
-# ============================================================
-# Requirements — DASS-42 Mental Health Prediction Project
-# ============================================================
-# Covers:
-#   - EDA_ML_prediction.ipynb  (data, ML, evaluation)
-#   - app_with_drift.py        (FastAPI deployment + drift monitoring)
-#   - Next-steps notebook      (cross-validation, VIF, tuning)
-#
-# Python version: 3.10+
-# Install: pip install -r requirements.txt
-# ============================================================
-
-# ----------------------------------------------------------
-# Core Data & Numerics
-# ----------------------------------------------------------
-numpy==2.4.2
-pandas==3.0.1
-
-# ----------------------------------------------------------
-# Visualisation
-# ----------------------------------------------------------
-matplotlib==3.10.8
+numpy==1.26.4
+pandas==2.2.1
+scikit-learn==1.4.1.post1
+scipy==1.12.0
+joblib==1.3.2
+imbalanced-learn==0.12.0
+shap==0.44.1
+fairlearn==0.10.0
+matplotlib==3.8.3
 seaborn==0.13.2
-
-# ----------------------------------------------------------
-# Machine Learning — Scikit-Learn & Utilities
-# ----------------------------------------------------------
-scikit-learn==1.8.0
-imbalanced-learn==0.12.4        # SMOTE for class balancing
-joblib==1.5.3                   # Model saving / loading (.pkl)
-
-# ----------------------------------------------------------
-# Boosting Models
-# ----------------------------------------------------------
-xgboost==2.1.4
-
-# ----------------------------------------------------------
-# Statistical Analysis
-# ----------------------------------------------------------
-scipy==1.17.0                   # KS test for drift detection
-statsmodels==0.14.4             # VIF (multicollinearity check)
-
-# ----------------------------------------------------------
-# FastAPI Deployment (app_with_drift.py)
-# ----------------------------------------------------------
-fastapi==0.115.6
-pydantic==2.10.4
-uvicorn==0.32.1                 # ASGI server to run the API
-
-# ============================================================
-# Quick-Start Commands
-# ============================================================
-#
-# 1. Install all dependencies:
-#       pip install -r requirements.txt
-#
-# 2. Run the Jupyter notebook:
-#       jupyter notebook EDA_ML_prediction.ipynb
-#
-# 3. Start the FastAPI server:
-#       uvicorn app_with_drift:app --reload --port 8000
-#
-# 4. Test the API (once running):
-#       curl http://localhost:8000/
-#
-# ============================================================
+fastapi==0.110.0
+uvicorn[standard]==0.29.0
+pydantic==2.6.4
+tqdm==4.66.2
